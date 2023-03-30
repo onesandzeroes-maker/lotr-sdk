@@ -1,0 +1,46 @@
+{
+  "name": "@onesandzeroes-maker/lotr-sdk",
+  "version": "0.0.2",
+  "description": "SDK for LOTR API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rm -fr ./dist",
+    "build": "tsc -p ./tsconfig.json",
+    "test": "mocha",
+    "eslint": "npx eslint . --ext .js,.ts",
+    "prettier": "run-p prettier:* -c --max-parallel 2 -l -n ",
+    "prettier:tsjs": "prettier --write --loglevel warn \"**/**/*.[j-t]s\"",
+    "prettier:json": "prettier --write --loglevel warn --parser json \"**/**/*.json\"",
+    "release": "run-s prettier eslint build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onesandzeroes-maker/lotr-sdk.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onesandzeroes-maker/lotr-sdk/issues"
+  },
+  "homepage": "https://github.com/onesandzeroes-maker/lotr-sdk/#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "^16.7.13",
+    "chai": "^4.3.4",
+    "eslint": "^7.32.0",
+    "mocha": "10.1.0",
+    "mochawesome": "^6.2.2",
+    "prettier": "^2.3.2",
+    "sinon": "^15.0.3",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2"
+  }
+}
