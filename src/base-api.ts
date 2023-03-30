@@ -41,7 +41,8 @@ export class BaseApi {
                 Authorization: "Bearer " +  this.#apiKey
             }
         })
-
+        //reset url query to allow further use of api instance
+        this.#urlQuery = ""
         return await response.json()
     }
 

@@ -1,8 +1,9 @@
 {
   "name": "@onesandzeroes-maker/lotr-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "SDK for LOTR API",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
